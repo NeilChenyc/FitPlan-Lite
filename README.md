@@ -1,3 +1,0 @@
-# Fitplan-Lite
-
-test
