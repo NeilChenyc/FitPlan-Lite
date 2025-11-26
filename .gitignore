@@ -4,61 +4,20 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-*.so
 
-# Environment variables
+# Environment
 .env
-.env.local
-
-# Build outputs
-build/
-dist/
-*.egg-info/
+venv/
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-
-# Database
-*.db
-*.sqlite3
-
-# Next.js
-.next/
-out/
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Large files
-*.node
-*.dll
-*.exe
-*.bin
-
-# Next.js build cache
-.next/
-
-# Images for README
-*.png
-*.jpg
-*.jpeg
-*.gif
+# Build
+*.egg-info/
+dist/
+build/
