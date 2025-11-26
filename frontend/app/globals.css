@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* 自定义样式 */
+@layer components {
+  .card {
+    @apply bg-surface rounded-2xl shadow-soft p-4 sm:p-6 transition-all duration-200 hover:shadow-lg;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-green-600 font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-white hover:bg-gray-700 font-medium py-3 px-6 rounded-lg transition-all duration-200 border border-gray-600 transform hover:scale-105 active:scale-95;
+  }
+
+  .progress-bar {
+    @apply bg-gray-700 rounded-full h-3 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply bg-primary h-full rounded-full transition-all duration-300 ease-in-out;
+  }
+
+  .weekday-item {
+    @apply flex flex-col items-center justify-center w-14 h-14 rounded-full cursor-pointer transition-all duration-200 transform hover:scale-110;
+  }
+
+  .weekday-item.completed {
+    @apply bg-primary text-white shadow-lg ring-2 ring-primary/30;
+  }
+
+  .weekday-item.training {
+    @apply bg-gray-700 text-white hover:bg-gray-600;
+  }
+
+  .weekday-item.rest {
+    @apply bg-gray-800 text-gray-400 hover:bg-gray-700;
+  }
+
+  .btn-icon {
+    @apply p-2 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+  }
+
+  .input-field {
+    @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200;
+  }
+
+  .toggle-btn {
+    @apply px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 transform hover:scale-105;
+  }
+
+  .exercise-item {
+    @apply flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 hover:bg-gray-700;
+  }
+}
