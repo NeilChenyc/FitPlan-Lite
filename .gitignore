@@ -53,3 +53,12 @@ pip-delete-this-directory.txt
 *.dll
 *.exe
 *.bin
+
+# Next.js build cache
+.next/
+
+# Images for README
+*.png
+*.jpg
+*.jpeg
+*.gif
